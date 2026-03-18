@@ -2,7 +2,7 @@ const variableDefinitions = {
     empresa: {
         "Razão Social": { var: "aRazSoc", init: "@Razão Socia@\nDefinir alfa aRazSoc;\naRazSoc = R014EMP.NomEmp;\n" },
         "Apelido":      { var: "aApeEmp", init: "@Apelido da Empresa@\nDefinir alfa aApeEmp;\naApeEmp = R014EMP.NomApe;\n" },
-        "CNPJ":         { var: "aNumCgc", init: "@CNPJ da empresa@\nDefinir alfa aNumCgc;\naNumCgc = R014EMP.NumCgc;\n" },
+        "CNPJ":         { var: "aNumCgc", init: "@CNPJ da empresa@\nDefinir alfa aNumCgc;\nConverteMascara (1,R030Fil.NumCgc,aNumCGC,\"99.999.999/9999-99\");;\n" },
         "Endereço":     { var: "aEndEmp", init: "@Endereço da Filial@\nDefinir alfa aEndEmp;\aEndEmp = R074CID.NomCid + \"-\" + R030FIL.CodEst  + \", à \" + R030FIL.TipLgr + \" \" + R030FIL.EndFil + \" \" + R030FIL.CplFil + ', nº ' + R030FIL.EndNum + ', ' + R074BAI.NOMBAI;\n" },
     },
     colaborador: {
