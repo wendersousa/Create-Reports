@@ -3,7 +3,7 @@ const variableDefinitions = {
         "Razão Social": { var: "aRazSoc", init: "@Razão Socia@\nDefinir alfa aRazSoc;\naRazSoc = R014EMP.NomEmp;\n" },
         "Apelido":      { var: "aApeEmp", init: "@Apelido da Empresa@\nDefinir alfa aApeEmp;\naApeEmp = R014EMP.NomApe;\n" },
         "CNPJ":         { var: "aNumCgc", init: "@CNPJ da empresa@\nDefinir alfa aNumCgc;\nConverteMascara (1,R030Fil.NumCgc,aNumCGC,\"99.999.999/9999-99\");\n" },
-        "Endereço":     { var: "aEndEmp", init: "@Endereço da Filial@\nDefinir alfa aEndEmp;\nEndEmp = R074CID.NomCid + \"-\" + R030FIL.CodEst  + \", à \" + R030FIL.TipLgr + \" \" + R030FIL.EndFil + \" \" + R030FIL.CplFil + \", nº \" + R030FIL.EndNum + \", \" + R074BAI.NOMBAI;\n" },
+        "Endereço":     { var: "aEndEmp", init: "@Endereço da Filial@\nDefinir alfa aEndEmp;\nDefinir Alfa aNomCid;\naNomCid = R074CID.NomCid;\nDefinir Alfa aNomEst;\naNomEst = R074CID.EstCid;\nDefinir Alfa aEndFil;\naEndFil = R030FIL.EndFil ;\nDefinir Alfa aFilNum;\naFilNum = R030FIL.EndNum ;\nDefinir Alfa nNumeroEmp;\nnNumeroEmp = R030FIL.EndNum;\nDefinir Alfa aBaiNom; \n aBaiNom = R074BAI.NomBai ;\nDefinir Alfa aEstCtp;\naEstCtp = R034FUN.EstCtp ;\nEndEmp = aNomCid + \"-\" + aNomEst + \" \" + aEndFil + \"N° \" + nNumeroEmp + \" BAIRRO \" +  aBaiNom;\n" }, 
     },
     colaborador: {
         "Nome":                  { var: "aNomCol", init: "@Nome do Colaborador@\nDefinir alfa aNomCol;\naNomCol = R034FUN.NomFun;\n" },
